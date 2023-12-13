@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <nav>
+            <a href="index.html">
+                <div class="nav-button">Home</div>
+            </a>
+            <a href="accomplishments.html">
+                <div class="nav-button">Academic Accomplishments</div>
+            </a>
+            <a href="facts.html">
+                <div class="nav-button" id="active">facts</div>
+            </a>
+        </nav>
+
+        <div class="column container outer" style="--shadow-color: black;">
+            <div class="faq-container">
+                <button class="accordion">My Major</button>
+                <div class="panel">
+                    <p>Im currently a CIS major but im thinking about dual majoring in CIS and mathematics.</p>
+                </div>
+
+                <button class="accordion">Favorite Project</button>
+                <div class="panel">
+                    <p>My personal favorite project ive done was an auction flipping bot for a minecraft server. It
+                        pulled data from the servers APIs to find a list of all auction items then filtered through them
+                        to find items to buy for profit. It checked over 50000 items per minute.</p>
+                </div>
+
+                <button class="accordion">Other Projects</button>
+                <div class="panel">
+                    <p>I large portion of the things ive made have been random small things in minecraft with redstone.
+                    </p>
+                    <p>The main ones include: a calculator, a basic computer, a hangman system, a display system, a
+                        2-wide incrementer, a 2-wide comparator made with just redstone, torches and repeaters, and many
+                        other circuits and games.</p>
+                </div>
+
+                <button class="accordion">Hobbies</button>
+                <div class="panel">
+                    <p>My main hobbies include gaming, rubiks cubing, coding and learning.</p>
+                </div>
+
+                <button class="accordion">Fastest Rubiks Cube Time</button>
+                <div class="panel">
+                    <p>Currently it's 8.502 seconds.</p>
+                </div>
+
+                <button class="accordion">Dream Job</button>
+                <div class="panel">
+                    <p>Either working in algorithmic optomization for quantum computers or as a barista for a local
+                        coffee shop. (though I think that one might pay a wee bit less)</p>
+                </div>
+
+                <button class="accordion">Favorite Song</button>
+                <div class="panel">
+                    <p>It varies a lot but according to my spotify wrapped its Je te laisserai des mots.</p>
+                </div>
+
+                <button class="accordion">Favorite Game</button>
+                <div class="panel">
+                    <p>It varies a lot but its split between minecraft, albion online, and magic the gathering right
+                        now.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Reach Out to Me</h3>
+            <p><a href="mailto:GeoffreyWortham.Too@gmail.com" class="underline" target="_blank">Email:
+                    GeoffreyWortham.Too@gmail.com</a></a></p>
+        </div>
+    </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
